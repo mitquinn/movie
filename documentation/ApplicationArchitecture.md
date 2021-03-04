@@ -31,25 +31,25 @@ Welcome to the _Movie Project_. This is a quick architecture document that is go
 #### ERD
 
 MOVIE
-  belongsToMany GENRE
-  hasMany ROLE
-  hasManyThrough PERSON through ROLE
-  morphToMany PICTURE
+  * belongsToMany GENRE
+  * hasMany ROLE
+  * hasManyThrough PERSON through ROLE
+  * morphToMany PICTURE
     
 GENRE
-  belongsToMany MOVIE
+  * belongsToMany MOVIE
 
 PERSON
-  hasMany ROLE
-  morphToMany PICTURE
+  * hasMany ROLE
+  * morphToMany PICTURE
 
 ROLE - I am thinking this makes more sense than connecting people directly to movies. A person could have multiple roles in a movie/movies (director, lead actor, support, etc).
-  belongsTo MOVIE
-  belongsTo PERSON
+  * belongsTo MOVIE
+  * belongsTo PERSON
     
 PICTURE - Rather than attaching a single photo to a person lets just make a PICTURE entity that we can attach to MOVIE and PERSON. Little extra work, tons of bang for buck. 
-  morphedByMany MOVIE
-  morphedByMany PERSON
+  * morphedByMany MOVIE
+  * morphedByMany PERSON
 
 #### Database Design
 
@@ -67,11 +67,11 @@ movies
 roles - pivot between movies/persons
 * id - primary
 * movie_id - index
-* person_id - index
+* people_id - index
 * type - string , (actor, director producer, etc)
 * timestamps
 
-persons
+people
 * id - primary
 * name - string, required
 * timestamps
@@ -90,6 +90,29 @@ genre_movie
 * timestamps
 
 
+#### To Do
+- [x] Base Laravel Install
+- [x] Install Passport
+- [x] Add Docker Compose
+- [x] Update Readme with install info
+- [x] Create Models
+- [x] Create Migrations
+- [ ] Add database relationships 
+- [x] Create Seeders
+- [ ] Create a Picture Seeder
+- [ ] Create Movie Routes
+- [ ] Base API Controller (abstract class?)  
+- [ ] Movie Controller
+- [ ] Movie API Requests
+- [ ] Genre Controller
+- [ ] Genre API Requests
+- [ ] Person Controller
+- [ ] Person API Requests
+  
+#### Considerations, Bugs, Oddities
+- [ ] Consider limiting movies to only having a single Role with specific type (one director)
+- [ ] Consider Roles type for actor/actress having the correct gender term based off Person.
+- [ ] Consider removing Role constraint for Movie and Person. Are empty models relationships reasonable?
 
  
 

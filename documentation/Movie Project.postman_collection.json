@@ -1,0 +1,814 @@
+{
+	"info": {
+		"_postman_id": "635d052b-48c7-4d21-ba2e-11386d0b54aa",
+		"name": "Movie Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movie API",
+			"item": [
+				{
+					"name": "Index",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Laravel Client Credentials Token",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{client_id}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{url}}/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/movie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/movie",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movie"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:4001"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:16:31 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:16:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"exercitationem\",\n            \"runtime\": 106,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"deserunt\",\n            \"runtime\": 184,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"est\",\n            \"runtime\": 170,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"aut\",\n            \"runtime\": 26,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"et\",\n            \"runtime\": 225,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"ut\",\n            \"runtime\": 206,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 7,\n            \"title\": \"vel\",\n            \"runtime\": 211,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 8,\n            \"title\": \"ipsa\",\n            \"runtime\": 63,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 9,\n            \"title\": \"officiis\",\n            \"runtime\": 31,\n            \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n        },\n        {\n            \"id\": 10,\n            \"title\": \"natus\",\n            \"runtime\": 76,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 11,\n            \"title\": \"deleniti\",\n            \"runtime\": 170,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 12,\n            \"title\": \"ab\",\n            \"runtime\": 92,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 13,\n            \"title\": \"in\",\n            \"runtime\": 197,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 14,\n            \"title\": \"accusantium\",\n            \"runtime\": 87,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 15,\n            \"title\": \"odio\",\n            \"runtime\": 48,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 16,\n            \"title\": \"praesentium\",\n            \"runtime\": 86,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 17,\n            \"title\": \"corrupti\",\n            \"runtime\": 167,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 18,\n            \"title\": \"dicta\",\n            \"runtime\": 213,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 19,\n            \"title\": \"voluptatem\",\n            \"runtime\": 83,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 20,\n            \"title\": \"est\",\n            \"runtime\": 142,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 21,\n            \"title\": \"molestiae\",\n            \"runtime\": 112,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 22,\n            \"title\": \"debitis\",\n            \"runtime\": 230,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 23,\n            \"title\": \"quisquam\",\n            \"runtime\": 182,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 24,\n            \"title\": \"possimus\",\n            \"runtime\": 41,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 25,\n            \"title\": \"beatae\",\n            \"runtime\": 68,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 26,\n            \"title\": \"voluptas\",\n            \"runtime\": 112,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 27,\n            \"title\": \"voluptate\",\n            \"runtime\": 158,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 28,\n            \"title\": \"at\",\n            \"runtime\": 79,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 29,\n            \"title\": \"nulla\",\n            \"runtime\": 217,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 30,\n            \"title\": \"voluptas\",\n            \"runtime\": 129,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 31,\n            \"title\": \"quibusdam\",\n            \"runtime\": 106,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 32,\n            \"title\": \"amet\",\n            \"runtime\": 82,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 33,\n            \"title\": \"ut\",\n            \"runtime\": 13,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 34,\n            \"title\": \"est\",\n            \"runtime\": 74,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 35,\n            \"title\": \"similique\",\n            \"runtime\": 19,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 36,\n            \"title\": \"doloremque\",\n            \"runtime\": 204,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 37,\n            \"title\": \"iure\",\n            \"runtime\": 222,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 38,\n            \"title\": \"necessitatibus\",\n            \"runtime\": 237,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 39,\n            \"title\": \"expedita\",\n            \"runtime\": 118,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 40,\n            \"title\": \"dolore\",\n            \"runtime\": 187,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 41,\n            \"title\": \"qui\",\n            \"runtime\": 77,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 42,\n            \"title\": \"et\",\n            \"runtime\": 190,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 43,\n            \"title\": \"dolores\",\n            \"runtime\": 134,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 44,\n            \"title\": \"molestiae\",\n            \"runtime\": 92,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 45,\n            \"title\": \"reprehenderit\",\n            \"runtime\": 12,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 46,\n            \"title\": \"consequatur\",\n            \"runtime\": 136,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 47,\n            \"title\": \"nam\",\n            \"runtime\": 154,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 48,\n            \"title\": \"consectetur\",\n            \"runtime\": 235,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 49,\n            \"title\": \"soluta\",\n            \"runtime\": 211,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 50,\n            \"title\": \"quo\",\n            \"runtime\": 114,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 51,\n            \"title\": \"adipisci\",\n            \"runtime\": 73,\n            \"created_at\": \"2021-03-04T16:30:45.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:45.000000Z\"\n        },\n        {\n            \"id\": 52,\n            \"title\": \"totam\",\n            \"runtime\": 194,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 53,\n            \"title\": \"qui\",\n            \"runtime\": 123,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 54,\n            \"title\": \"optio\",\n            \"runtime\": 108,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 55,\n            \"title\": \"autem\",\n            \"runtime\": 19,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 56,\n            \"title\": \"libero\",\n            \"runtime\": 224,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 57,\n            \"title\": \"rerum\",\n            \"runtime\": 65,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 58,\n            \"title\": \"ipsum\",\n            \"runtime\": 50,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 59,\n            \"title\": \"sunt\",\n            \"runtime\": 224,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 60,\n            \"title\": \"ut\",\n            \"runtime\": 108,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 61,\n            \"title\": \"qui\",\n            \"runtime\": 211,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 62,\n            \"title\": \"reprehenderit\",\n            \"runtime\": 44,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 63,\n            \"title\": \"pariatur\",\n            \"runtime\": 46,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 64,\n            \"title\": \"qui\",\n            \"runtime\": 165,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 65,\n            \"title\": \"quibusdam\",\n            \"runtime\": 84,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 66,\n            \"title\": \"quas\",\n            \"runtime\": 53,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 67,\n            \"title\": \"totam\",\n            \"runtime\": 178,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 68,\n            \"title\": \"eos\",\n            \"runtime\": 70,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 69,\n            \"title\": \"sint\",\n            \"runtime\": 126,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 70,\n            \"title\": \"sit\",\n            \"runtime\": 189,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 71,\n            \"title\": \"officiis\",\n            \"runtime\": 93,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 72,\n            \"title\": \"minima\",\n            \"runtime\": 9,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 73,\n            \"title\": \"voluptas\",\n            \"runtime\": 213,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 74,\n            \"title\": \"quia\",\n            \"runtime\": 66,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 75,\n            \"title\": \"quia\",\n            \"runtime\": 148,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 76,\n            \"title\": \"dignissimos\",\n            \"runtime\": 198,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 77,\n            \"title\": \"autem\",\n            \"runtime\": 68,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 78,\n            \"title\": \"et\",\n            \"runtime\": 172,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 79,\n            \"title\": \"necessitatibus\",\n            \"runtime\": 115,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 80,\n            \"title\": \"doloribus\",\n            \"runtime\": 123,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 81,\n            \"title\": \"autem\",\n            \"runtime\": 202,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 82,\n            \"title\": \"eius\",\n            \"runtime\": 216,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 83,\n            \"title\": \"laborum\",\n            \"runtime\": 127,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 84,\n            \"title\": \"incidunt\",\n            \"runtime\": 205,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 85,\n            \"title\": \"aperiam\",\n            \"runtime\": 187,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 86,\n            \"title\": \"eveniet\",\n            \"runtime\": 69,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 87,\n            \"title\": \"odit\",\n            \"runtime\": 233,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 88,\n            \"title\": \"et\",\n            \"runtime\": 50,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 89,\n            \"title\": \"veniam\",\n            \"runtime\": 157,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 90,\n            \"title\": \"aspernatur\",\n            \"runtime\": 167,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 91,\n            \"title\": \"voluptatibus\",\n            \"runtime\": 39,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 92,\n            \"title\": \"error\",\n            \"runtime\": 28,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 93,\n            \"title\": \"molestias\",\n            \"runtime\": 140,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 94,\n            \"title\": \"molestias\",\n            \"runtime\": 168,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 95,\n            \"title\": \"inventore\",\n            \"runtime\": 81,\n            \"created_at\": \"2021-03-04T16:30:46.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:46.000000Z\"\n        },\n        {\n            \"id\": 96,\n            \"title\": \"dolores\",\n            \"runtime\": 204,\n            \"created_at\": \"2021-03-04T16:30:47.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:47.000000Z\"\n        },\n        {\n            \"id\": 97,\n            \"title\": \"quos\",\n            \"runtime\": 198,\n            \"created_at\": \"2021-03-04T16:30:47.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:47.000000Z\"\n        },\n        {\n            \"id\": 98,\n            \"title\": \"ullam\",\n            \"runtime\": 234,\n            \"created_at\": \"2021-03-04T16:30:47.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:47.000000Z\"\n        },\n        {\n            \"id\": 99,\n            \"title\": \"voluptate\",\n            \"runtime\": 186,\n            \"created_at\": \"2021-03-04T16:30:47.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:47.000000Z\"\n        },\n        {\n            \"id\": 100,\n            \"title\": \"porro\",\n            \"runtime\": 145,\n            \"created_at\": \"2021-03-04T16:30:47.000000Z\",\n            \"updated_at\": \"2021-03-04T16:30:47.000000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Laravel Client Credentials Token",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{client_id}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{url}}/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/movie/{{movie_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"{{movie_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Show",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/movie/{{movie_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movie",
+										"{{movie_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:4001"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:23:30 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:23:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"exercitationem\",\n        \"runtime\": 106,\n        \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n        \"updated_at\": \"2021-03-04T16:30:44.000000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Destroy",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Laravel Client Credentials Token",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{client_id}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{url}}/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/v1/movie/{{movie_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"{{movie_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Laravel Client Credentials Token",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{client_id}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{url}}/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "RandomMovieTitle",
+									"type": "text"
+								},
+								{
+									"key": "runtime",
+									"value": "100",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/movie",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "RandomMovieTitle",
+											"type": "text"
+										},
+										{
+											"key": "runtime",
+											"value": "100",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/movie",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movie"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:4001"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:29:08 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:29:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"title\": \"RandomMovieTitle\",\n        \"runtime\": \"100\",\n        \"updated_at\": \"2021-03-04T18:29:08.000000Z\",\n        \"created_at\": \"2021-03-04T18:29:08.000000Z\",\n        \"id\": 101\n    }\n}"
+						},
+						{
+							"name": "Store",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{url}}/api/v1/movie",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movie"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:4001"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:27:40 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:27:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The given data was invalid.\",\n    \"errors\": {\n        \"title\": [\n            \"The title field is required.\"\n        ],\n        \"runtime\": [\n            \"The runtime field is required.\"\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"auth": {
+							"type": "oauth2",
+							"oauth2": [
+								{
+									"key": "scope",
+									"value": "",
+									"type": "string"
+								},
+								{
+									"key": "tokenName",
+									"value": "Laravel Client Credentials Token",
+									"type": "string"
+								},
+								{
+									"key": "clientSecret",
+									"value": "{{client_secret}}",
+									"type": "string"
+								},
+								{
+									"key": "clientId",
+									"value": "{{client_id}}",
+									"type": "string"
+								},
+								{
+									"key": "accessTokenUrl",
+									"value": "{{url}}/oauth/token",
+									"type": "string"
+								},
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "string"
+								},
+								{
+									"key": "addTokenTo",
+									"value": "header",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"RandomTitleUpdatedss\",\n    \"runtime\": \"255\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/v1/movie/{{movie_id}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"movie",
+								"{{movie_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"RandomTitleUpdatedss\",\n    \"runtime\": \"255\" \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}/api/v1/movie/{{movie_id}}",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"movie",
+										"{{movie_id}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "localhost:4001"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:46:00 GMT"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 04 Mar 2021 18:46:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/7.4.1"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"RandomTitleUpdatedss\",\n        \"runtime\": \"255\",\n        \"created_at\": \"2021-03-04T16:30:44.000000Z\",\n        \"updated_at\": \"2021-03-04T18:46:00.000000Z\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Generate Access Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "{{client_id}}",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "{{client_secret}}",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/oauth/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
